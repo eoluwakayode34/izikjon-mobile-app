@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View ,StyleSheet, Text, StatusBar, Platform, TextInput} from 'react-native';
+import { View ,StyleSheet, Text, StatusBar, Platform, TextInput, Button} from 'react-native';
 import {CheckBox} from 'react-native-elements';
 
 import AppText from '../component/AppText';
@@ -7,10 +7,12 @@ import Foreground from '../component/Foreground';
 import PrimaryHeadingText from '../component/PrimaryHeadingText';
 import FormInput from '../component/FormInput';
 import AppButton from '../component/AppButton';
+import colors from '../config/color'
+import LinkText from '../component/LinkText'
 
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 
-function GettingStartedScreen(props) {
+function GettingStartedScreen({navigation}) {
     const [isSelected, setSelection] = useState(false);
 
     return (
@@ -24,7 +26,18 @@ function GettingStartedScreen(props) {
                 right: 20,
                 top: 40
             }}>
-            <AppText>Already have an account? Sign In</AppText>
+                <View>
+                <AppText>Already have an account?
+
+</AppText>
+<LinkText title='Sign In' navigatorName='SignIn'/>
+                </View>
+          
+
+
+                 
+
+
 
             </View>
             
@@ -48,7 +61,9 @@ function GettingStartedScreen(props) {
             </View>
 
             <View style={styles.buttonContainer}>
-            <AppButton title='Sign Up'/>
+            <AppButton title='Sign Up'
+            
+            />
             </View>
            
 

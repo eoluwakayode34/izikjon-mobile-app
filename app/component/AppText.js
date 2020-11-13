@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         color: '#757575',
         fontFamily: 'font',
-        textAlign: "center"
+        textAlign: "center",
+      
     }
 })
 

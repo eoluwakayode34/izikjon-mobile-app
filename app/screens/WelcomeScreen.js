@@ -4,12 +4,20 @@ import { AppLoading } from 'expo';
 import colors from '../config/color'
 import { useFonts} from 'expo-font';
 
-function WelcomeScreen(props) {
+function WelcomeScreen({navigation}) {
   let [fontsLoaded] = useFonts({
     'Inter-Black': require('../assets/fonts/Comfortaa-Regular.ttf'),
     'font-bold': require('../assets/fonts/Comfortaa-Bold.ttf'),
 
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('GettingStarted')
+    }, 2000)
+  }, [])
+
+
   if (!fontsLoaded) {
     return <AppLoading/>;
   }
