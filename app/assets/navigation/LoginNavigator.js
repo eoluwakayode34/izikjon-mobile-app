@@ -5,7 +5,7 @@ import SignInScreen from '../../screens/SignInScreen'
 import GettingStartedScreen from '../../screens/GettingStartedScreen'
 import ResetPasswordScreen from '../../screens/ResetPasswordScreen'
 import ForgotPasswordScreen from '../../screens/ForgotPasswordScreen'
-
+import IntoSliderScreen from '../../screens/IntroSliderScreen'
 
     const Stack = createStackNavigator();
     const LoginNavigator = () => {
@@ -19,6 +19,13 @@ import ForgotPasswordScreen from '../../screens/ForgotPasswordScreen'
                 headerShown: false
             }}
             component={WelcomeScreen}/>
+
+            <Stack.Screen name='IntoSliderScreen' 
+            options={{
+                headerShown: false
+            }}
+            component={IntoSliderScreen}/>
+
 
             <Stack.Screen name='GettingStarted'
             options={{

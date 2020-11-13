@@ -7,10 +7,10 @@ import Foreground from '../component/Foreground';
 import PrimaryHeadingText from '../component/PrimaryHeadingText';
 import FormInput from '../component/FormInput';
 import AppButton from '../component/AppButton';
-
+import LinkText from '../component/LinkText';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 
-function SignInScreen(props) {
+function SignInScreen({navigation}) {
     const [isSelected, setSelection] = useState(false);
 
     return (
@@ -27,7 +27,7 @@ function SignInScreen(props) {
             <View style={styles.userInputContainer}>
             <FormInput  placeholderText="Username" icon='email-outline' size={20} />
             <FormInput  placeholderText="Password" icon='lock-outline' size={20} />
-            <AppText>Forget your credentials ?</AppText>
+            <LinkText title='Forget your credentials ?' navigatorName='ForgotPassword'/>
             </View>
             
             <View style={styles.checkboxContainer}>
@@ -41,7 +41,7 @@ function SignInScreen(props) {
 
             <View style={styles.buttonContainer}>
             <AppButton title='Sign in'/>
-            <AppButton title='Create an account' color='lightgrey' textColor='black' />
+            <AppButton title='Create an account' color='lightgrey' textColor='black' navigatorName='GettingStarted' />
             </View>
            
 
@@ -78,8 +78,9 @@ const styles = StyleSheet.create({
 
 
       buttonContainer: {
-          width: '100%'
-      },
+          width: '100%',
+
+        },
 
     checkbox: {
         alignSelf: "flex-start",

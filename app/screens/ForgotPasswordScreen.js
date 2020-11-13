@@ -10,7 +10,7 @@ import AppButton from '../component/AppButton';
 
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 
-function ForgotPasswordScreen(props) {
+function ForgotPasswordScreen({navigation}) {
     const [isSelected, setSelection] = useState(false);
 
     return (
@@ -31,7 +31,7 @@ function ForgotPasswordScreen(props) {
            
 
             <View style={styles.buttonContainer}>
-            <AppButton title='Send Code'/>
+            <AppButton title='Send Code' navigatorName='ResetPassword'   />
             <View style={styles.checkboxContainer}>
              
              <AppText>By Creating an account, you agree to our Terms and conditions</AppText>

@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Image} from 'react-native';
 import { AppLoading } from 'expo';
 import colors from '../config/color'
 import { useFonts} from 'expo-font';
+import Screen from '../component/Screen'
 
 function WelcomeScreen({navigation}) {
   let [fontsLoaded] = useFonts({
@@ -13,7 +14,7 @@ function WelcomeScreen({navigation}) {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('GettingStarted')
+      navigation.navigate('IntoSliderScreen')
     }, 2000)
   }, [])
 
@@ -24,6 +25,7 @@ function WelcomeScreen({navigation}) {
 
   else{
     return   (
+
       <View style={styles.background}>
          
           <View style={styles.buttonContainer}>
@@ -38,6 +40,7 @@ function WelcomeScreen({navigation}) {
  
           <Text style={styles.logoTagline}>...Grand Masters of Instant Payment</Text>
       </View>
+     
    );
   }
     

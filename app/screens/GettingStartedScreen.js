@@ -26,7 +26,7 @@ function GettingStartedScreen({navigation}) {
                 right: 20,
                 top: 40
             }}>
-                <View>
+                <View style={styles.signContainer}>
                 <AppText>Already have an account?
 
 </AppText>
@@ -48,11 +48,13 @@ function GettingStartedScreen({navigation}) {
             <View style={styles.userInputContainer}>
             <FormInput  placeholderText="Username" icon='email-outline' size={20} />
             <FormInput  placeholderText="Password" icon='lock-outline' size={20} />
-            <AppText>Forget your credentials ?</AppText>
+            <LinkText title='Forget your credentials ?' navigatorName='ForgotPassword'/>
+
+            
             </View>
             
             <View style={styles.checkboxContainer}>
-                <CheckBox
+                  <CheckBox
                      value={isSelected}
                      onValueChange={setSelection}
                      style={styles.checkbox}
@@ -78,6 +80,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
       
+    },
+
+    signContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+
     },
 
     userInputContainer: {

@@ -3,7 +3,7 @@ import { Text, StyleSheet} from 'react-native';
 import { useFonts} from 'expo-font';
 import { AppLoading } from 'expo';
 
-function AppText({children, size}) {
+function AppText({children, size, text}) {
     let [fontsLoaded] = useFonts({
         'font': require('../assets/fonts/Comfortaa-Regular.ttf'),
         'font-bold': require('../assets/fonts/Comfortaa-Bold.ttf'),
@@ -14,7 +14,7 @@ function AppText({children, size}) {
       }
       else{
         return (
-            <Text style={[styles.text, {fontSize: size }]}>{children}</Text>
+            <Text style={[styles.text, {fontSize: size }, text]}>{children}</Text>
             );
       }
    

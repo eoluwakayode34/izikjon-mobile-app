@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "demoProject",
-    "slug": "demoProject",
+    "name": "izikjon",
+    "slug": "izikjon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "Izikjon first interaction for welcome",
+    "githubUrl": "https://github.com/eoluwakayode34/izikjon-mobile-app"
   }
 }

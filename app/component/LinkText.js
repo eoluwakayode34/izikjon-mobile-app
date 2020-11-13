@@ -10,7 +10,8 @@ function LinkText({title, navigatorName}) {
     const navigation =  useNavigation()
     return (
       <TouchableOpacity
-      onPress={() => {navigation.navigate('SignIn')} }>
+      style={styles.container}
+      onPress={() => {navigation.navigate(navigatorName)} }>
            <Text style={styles.link}>{title}</Text>
 
       </TouchableOpacity>
@@ -18,10 +19,14 @@ function LinkText({title, navigatorName}) {
 }
 
 const styles = StyleSheet.create({
+        container: {
 
+          margin: 10
+        },
 
         link: {
             color: colors.primary,
+
            
         }
 })
