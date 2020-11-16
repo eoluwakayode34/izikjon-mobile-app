@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         color: '#757575',
         fontFamily: 'font',
         textAlign: "center",
+        letterSpacing: 1
       
     }
 })

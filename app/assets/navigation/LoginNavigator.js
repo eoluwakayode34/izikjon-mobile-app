@@ -11,9 +11,7 @@ import IntoSliderScreen from '../../screens/IntroSliderScreen'
     const LoginNavigator = () => {
 
         return(
-            <Stack.Navigator initialRouteName='WelcomeScreen'
-            
-           >
+            <Stack.Navigator initialRouteName='WelcomeScreen'>
             <Stack.Screen name='Welcome' 
             options={{
                 headerShown: false
